@@ -118,12 +118,17 @@ int main() {
 
     int k = 1200; // constant parameter
 
+    clock_t start,end;
+    start = clock();
     vector<Edge> segmentTree = graph.segmentTree(k,n);
+    end = clock();
 
     cout << "Edges in the segment tree:" << endl;
     for (const Edge& edge : segmentTree) {
         cout << edge.u << " " << edge.v << " " << edge.weight << endl;
     }
+
+    cout<<"time taken : "<<(float)end-start/CLOCKS_PER_SEC<<" Cycles per sec"<<endl;
 
     return 0;
 }
