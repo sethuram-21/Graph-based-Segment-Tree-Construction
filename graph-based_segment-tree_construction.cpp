@@ -44,7 +44,7 @@ public:
         edges.clear();
         for (int i = 0; i < n; ++i) {
             nodes[i].parent = i;
-            nodes[i].rank = 0;
+            nodes[i].rank = 1;
         }
     }
 
